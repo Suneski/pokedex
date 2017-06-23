@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/server.js",
+    "heroku-postbuild": "cd react-ui/ && npm install --only=dev && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Suneski/pokedex/issues"
   },
-  "homepage": "https://github.com/Suneski/pokedex#readme"
+  "homepage": "https://github.com/Suneski/pokedex#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
 }
