@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
+import store from './redux/Store.js';
 import $ from 'jquery';
 
 class App extends Component {
   constructor() {
     super();
+    this.state = store.getState();
+  }
 
-    this.state = {
-      searchTerm: '',
-      results: []
-    }
+  componentDidMount() {
+    store.subscribe(() => this.setState(store.getState()));
   }
 
   updateSearchTerm(evt) {
-    this.setState({
+    store.dispatch({
+      type: 'SEARCH',
       searchTerm: evt.target.value
     })
   }
@@ -22,8 +24,8 @@ class App extends Component {
       url: 'http://pokeapi.co/api/v2/pokemon/' + this.state.searchTerm
     })
     .done((data) => {
-      this.setState({
-        searchTerm: '',
+      store.dispatch({
+        type: 'SAVE_RESULTS',
         results: data
       })
     });
