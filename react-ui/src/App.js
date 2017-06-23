@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import store from './redux/Store.js';
-import $ from 'jquery';
+import Api from './Api.js';
 
 class App extends Component {
   constructor() {
@@ -20,15 +20,7 @@ class App extends Component {
   }
 
   makeAjaxCall() {
-    $.ajax({
-      url: 'http://pokeapi.co/api/v2/pokemon/' + this.state.searchTerm
-    })
-    .done((data) => {
-      store.dispatch({
-        type: 'SAVE_RESULTS',
-        results: data
-      })
-    });
+    Api.makeAjaxCall(this.state.searchTerm);
   };
 
   render() {
