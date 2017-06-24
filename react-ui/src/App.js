@@ -4,6 +4,7 @@ import Api from './Api.js';
 import Error from './Error.js';
 import Images from './Images.js';
 import Summary from './Summary.js';
+import Loader from './images/pokeball-loader.gif'
 
 class App extends Component {
   constructor() {
@@ -34,9 +35,12 @@ class App extends Component {
       <div className="App">
         <input onKeyUp={(evt) => this.updateSearchTerm(evt)}/>
         <button onClick={() => this.makeAjaxCall()}>SEARCH</button>
-          <Error
-            errorVisibility={this.state.errorVisibility}
-          />
+        <div>
+          <img className={this.state.loader} src={Loader} alt="loading gif"/>
+        </div>
+        <Error
+          errorVisibility={this.state.errorVisibility}
+        />
         <div className={this.state.pokeDetails}>
           <h1>{this.state.name}</h1>
           <Images

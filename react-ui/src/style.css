@@ -51,6 +51,12 @@ table {
 .pokeDetails-visible {
   display: block; }
 
+.loader-invisible {
+  display: none; }
+
+.loader-visible {
+  display: block; }
+
 .error-invisible {
   display: none; }
 

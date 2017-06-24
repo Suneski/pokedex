@@ -6,6 +6,10 @@ const Api = {
   makeAjaxCall(arg) {
     let searchTerm;
 
+    store.dispatch({
+      type: actions.SHOW_LOADER
+    })
+
     switch (arg) {
       case "deoxys":
         searchTerm = "deoxys-normal";

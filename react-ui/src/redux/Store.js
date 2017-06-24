@@ -6,6 +6,7 @@ const actions = {
   SHINY: 'SHINY',
   NORMAL: 'NORMAL',
   ERROR: 'ERROR',
+  SHOW_LOADER: 'SHOW_LOADER',
 }
 
 var initialState = {
@@ -13,6 +14,7 @@ var initialState = {
   pokeDetails: 'pokeDetails-invisible',
   normalVisibility: 'normal-invisible',
   shinyVisibility: 'shiny-visible',
+  loader: 'loader-invisible',
   results: [],
   name: 'bulbasaur',
   errorVisibility: 'error-invisible',
@@ -28,15 +30,21 @@ const reducer = (state = initialState, action) => {
         normalVisibility: 'normal-invisible',
         shinyVisibility: 'shiny-visible',
       });
+    case actions.SHOW_LOADER:
+      return Object.assign({}, state, {
+        loader: 'loader-visible',
+      });
     case actions.ERROR:
       return Object.assign({}, state, {
         errorVisibility: 'error-visible',
         pokeDetails: 'pokeDetails-invisible',
+        loader: 'loader-invisible',
       });
     case actions.SAVE_RESULTS:
       return Object.assign({}, state, {
         pokeDetails: 'pokeDetails-visible',
         errorVisibility: 'error-invisible',
+        loader: 'loader-invisible',
         results: action.results,
         name: action.name,
         weight: action.weight,
