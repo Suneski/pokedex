@@ -19,6 +19,9 @@ class App extends Component {
       type: actions.SEARCH,
       searchTerm: evt.target.value
     })
+    if (evt.keyCode === 13) {
+      Api.makeAjaxCall(this.state.searchTerm.toLowerCase());
+    }
   }
 
   makeAjaxCall() {
@@ -40,7 +43,9 @@ class App extends Component {
   }
 
   render() {
-    let types = this.state.types.map((x) => <Types
+
+    let revTypes = this.state.types.reverse();
+    let types = revTypes.map((x) => <Types
       type={x.type.name}
     />);
 
@@ -61,6 +66,7 @@ class App extends Component {
           <p>Special Attack: {this.state.specialAttack}</p>
           <p>Special Defense: {this.state.specialDefense}</p>
           <p>Speed: {this.state.speed}</p>
+          <p>Type: </p>
           <ol>
             {types}
           </ol>
