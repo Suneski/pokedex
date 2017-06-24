@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { store, actions } from './redux/Store.js';
 import Api from './Api.js';
 import Types from './Types.js';
+import Error from './Error.js';
 import Pokemon from 'react-pokemon';
 import NoImage from './images/no-image.png';
 
@@ -66,13 +67,15 @@ class App extends Component {
       type={x.type.name}
     />);
 
+    // let error = 
+
     return (
       <div className="App">
         <input onKeyUp={(evt) => this.updateSearchTerm(evt)}/>
         <button onClick={() => this.makeAjaxCall()}>SEARCH</button>
-        <div className={this.state.errorVisibility}>
-          Pokemon Not Found
-        </div>
+          <Error
+            errorVisibility={this.state.errorVisibility}
+          />
         <div className={this.state.pokeDetails}>
           <h1>{this.state.name}</h1>
           <Pokemon name={this.state.name} />
