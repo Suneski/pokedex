@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import store from './redux/Store.js';
+import { store, actions } from './redux/Store.js';
 import Api from './Api.js';
 import Types from './Types.js';
 import Pokemon from 'react-pokemon';
@@ -16,7 +16,7 @@ class App extends Component {
 
   updateSearchTerm(evt) {
     store.dispatch({
-      type: 'SEARCH',
+      type: actions.SEARCH,
       searchTerm: evt.target.value
     })
   }
@@ -27,20 +27,20 @@ class App extends Component {
 
   shinyVersion() {
     store.dispatch({
-      type: 'SHINY',
+      type: actions.SHINY,
       sprite: this.state.shiny
     })
   }
 
   normalVersion() {
     store.dispatch({
-      type: 'NORMAL',
+      type: actions.NORMAL,
       sprite: this.state.normal
     })
   }
 
   render() {
-    let types = this.state.types.map((x) => <Types 
+    let types = this.state.types.map((x) => <Types
       type={x.type.name}
     />);
 

@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import store from './redux/Store.js';
+import { store, actions } from './redux/Store.js';
 
 const Api = {
   makeAjaxCall(searchTerm) {
@@ -8,7 +8,7 @@ const Api = {
     })
     .done((data) => {
       store.dispatch({
-        type: 'SAVE_RESULTS',
+        type: actions.SAVE_RESULTS,
         results: data,
         name: data.name,
         sprite: data.sprites.front_default,
