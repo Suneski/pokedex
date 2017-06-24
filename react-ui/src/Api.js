@@ -2,9 +2,40 @@ import $ from 'jquery';
 import { store, actions } from './redux/Store.js';
 
 const Api = {
-  makeAjaxCall(searchTerm) {
+  makeAjaxCall(arg) {
+    let searchTerm;
+
+    switch (arg) {
+      case "deoxys":
+        searchTerm = "deoxys-normal";
+        break;
+      case "giratina":
+        searchTerm = "giratina-origin";
+        break;
+      case "shaymin":
+        searchTerm = "shaymin-land";
+        break;
+      case "darmanitan":
+        searchTerm = "darmanitan-standard";
+        break;
+      case "meloetta":
+        searchTerm = "meloetta-aria";
+        break;
+      case "hoopa":
+        searchTerm = "hoopa-confined";
+        break;
+      default:
+        searchTerm = arg;
+    }
+
     $.ajax({
       url: 'https://pokeapi.co/api/v2/pokemon/' + searchTerm
+    })
+    .catch( (ex) => {
+      console.log('parsing failed', ex);
+      store.dispatch({
+        type: actions.ERROR
+      })
     })
     .done((data) => {
       store.dispatch({

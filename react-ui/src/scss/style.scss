@@ -1,9 +1,38 @@
 @import 'reset';
 
-// .App {
-//   background-color: blue;
-// }
+.pokeDetails-invisible {
+  display: none;
+}
 
-// .pokeDetails-invisible {
-//   display: none;
-// }
+.pokeDetails-visible {
+  display: block;
+}
+
+.error-invisible {
+  display: none;
+}
+
+.error-visible {
+  display: block;
+}
+
+.normal-visible {
+  display: block;
+}
+
+.normal-invisible {
+  display: none;
+}
+
+.shiny-visible {
+  display: block;
+}
+
+.shiny-invisible {
+  display: none;
+}
+
+.sprite {
+  width: 96px;
+  height: 96px;
+}

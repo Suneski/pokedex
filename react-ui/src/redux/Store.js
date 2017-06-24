@@ -5,13 +5,17 @@ const actions = {
   SAVE_RESULTS: 'SAVE_RESULTS',
   SHINY: 'SHINY',
   NORMAL: 'NORMAL',
+  ERROR: 'ERROR',
 }
 
 var initialState = {
   searchTerm: '',
   pokeDetails: 'pokeDetails-invisible',
+  normalVisibility: 'normal-invisible',
+  shinyVisibility: 'shiny-visible',
   results: [],
   name: '',
+  errorVisibility: 'error-invisible',
   types: [],
 };
 
@@ -22,8 +26,15 @@ const reducer = (state = initialState, action) => {
       return Object.assign({}, state, {
         searchTerm: action.searchTerm
       });
+    case actions.ERROR:
+      return Object.assign({}, state, {
+        errorVisibility: 'error-visible',
+        pokeDetails: 'pokeDetails-invisible',
+      });
     case actions.SAVE_RESULTS:
       return Object.assign({}, state, {
+        pokeDetails: 'pokeDetails-visible',
+        errorVisibility: 'error-invisible',
         results: action.results,
         name: action.name,
         sprite: action.sprite,
@@ -40,10 +51,14 @@ const reducer = (state = initialState, action) => {
     case actions.SHINY:
       return Object.assign({}, state, {
         sprite: action.sprite,
+        normalVisibility: 'normal-visible',
+        shinyVisibility: 'shiny-invisible',
       });
     case actions.NORMAL:
       return Object.assign({}, state, {
         sprite: action.sprite,
+        normalVisibility: 'normal-invisible',
+        shinyVisibility: 'shiny-visible',
       });
     default: return state
   }

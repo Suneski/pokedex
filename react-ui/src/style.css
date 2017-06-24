@@ -44,3 +44,31 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+.pokeDetails-invisible {
+  display: none; }
+
+.pokeDetails-visible {
+  display: block; }
+
+.error-invisible {
+  display: none; }
+
+.error-visible {
+  display: block; }
+
+.normal-visible {
+  display: block; }
+
+.normal-invisible {
+  display: none; }
+
+.shiny-visible {
+  display: block; }
+
+.shiny-invisible {
+  display: none; }
+
+.sprite {
+  width: 96px;
+  height: 96px; }
