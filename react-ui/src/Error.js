@@ -1,5 +1,4 @@
 import React from 'react';
-import { store, actions } from './redux/Store.js';
 
 class Error extends React.Component {
   render() {

@@ -1,8 +1,5 @@
 import React from 'react';
 import Types from './Types.js';
-import Pokemon from 'react-pokemon';
-import { store, actions } from './redux/Store.js';
-import NoImage from './images/no-image.png';
 
 class Summary extends React.Component {
 
@@ -13,8 +10,9 @@ class Summary extends React.Component {
     //   type={x.type.name}
     // />);
 
-    let types = this.props.types.map((x) => <Types
+    let types = this.props.types.map((x, i) => <Types
       type={x.type.name}
+      key={i}
     />);
 
     return(
