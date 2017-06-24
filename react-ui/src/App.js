@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import store from './redux/Store.js';
 import Api from './Api.js';
+import Types from './Types.js';
 import Pokemon from 'react-pokemon';
 
 class App extends Component {
@@ -39,6 +40,10 @@ class App extends Component {
   }
 
   render() {
+    let types = this.state.types.map((x) => <Types 
+      type={x.type.name}
+    />);
+
     return (
       <div className="App">
         <input onKeyUp={(evt) => this.updateSearchTerm(evt)}/>
@@ -56,6 +61,9 @@ class App extends Component {
           <p>Special Attack: {this.state.specialAttack}</p>
           <p>Special Defense: {this.state.specialDefense}</p>
           <p>Speed: {this.state.speed}</p>
+          <ol>
+            {types}
+          </ol>
         </div>
 
       </div>

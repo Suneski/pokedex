@@ -11,7 +11,8 @@ var initialState = {
   searchTerm: '',
   pokeDetails: 'pokeDetails-invisible',
   results: [],
-  name: ''
+  name: '',
+  types: [],
 };
 
 const reducer = (state = initialState, action) => {
@@ -34,6 +35,7 @@ const reducer = (state = initialState, action) => {
         specialAttack: action.specialAttack,
         specialDefense: action.specialDefense,
         speed: action.speed,
+        types: action.types
       });
     case actions.SHINY:
       return Object.assign({}, state, {
