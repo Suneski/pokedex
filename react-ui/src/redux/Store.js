@@ -9,12 +9,12 @@ const actions = {
 }
 
 var initialState = {
-  searchTerm: '',
+  searchTerm: 'bulbasaur',
   pokeDetails: 'pokeDetails-invisible',
   normalVisibility: 'normal-invisible',
   shinyVisibility: 'shiny-visible',
   results: [],
-  name: '',
+  name: 'bulbasaur',
   errorVisibility: 'error-invisible',
   types: [],
 };
@@ -24,7 +24,9 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actions.SEARCH:
       return Object.assign({}, state, {
-        searchTerm: action.searchTerm
+        searchTerm: action.searchTerm,
+        normalVisibility: 'normal-invisible',
+        shinyVisibility: 'shiny-visible',
       });
     case actions.ERROR:
       return Object.assign({}, state, {

@@ -43,9 +43,15 @@ class App extends Component {
   }
 
   normalVersion() {
+    let sprite = this.state.normal;
+
+    if (this.state.normal === null) {
+      sprite = NoImage
+    }
+
     store.dispatch({
       type: actions.NORMAL,
-      sprite: this.state.normal
+      sprite: sprite
     })
   }
 
@@ -84,7 +90,7 @@ class App extends Component {
             className={this.state.normalVisibility}>
             Normal...
           </button>
-          <p>Stats</p>
+          <p>Base Stats</p>
           <p>HP: {this.state.hp}</p>
           <p>Attack: {this.state.attack}</p>
           <p>Defense: {this.state.defense}</p>

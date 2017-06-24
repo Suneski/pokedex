@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import { store, actions } from './redux/Store.js';
+import NoImage from './images/no-image.png';
 
 const Api = {
   makeAjaxCall(arg) {
@@ -38,11 +39,17 @@ const Api = {
       })
     })
     .done((data) => {
+      let sprite = data.sprites.front_default;
+
+      if (sprite === null) {
+        sprite = NoImage
+      }
+
       store.dispatch({
         type: actions.SAVE_RESULTS,
         results: data,
         name: data.name,
-        sprite: data.sprites.front_default,
+        sprite: sprite,
         normal: data.sprites.front_default,
         shiny: data.sprites.front_shiny,
         hp: data.stats[5].base_stat,
