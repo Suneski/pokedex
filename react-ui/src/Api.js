@@ -12,6 +12,8 @@ const Api = {
         results: data,
         name: data.name,
         sprite: data.sprites.front_default,
+        normal: data.sprites.front_default,
+        shiny: data.sprites.front_shiny,
         hp: data.stats[5].base_stat,
         attack: data.stats[4].base_stat,
         defense: data.stats[3].base_stat,
