@@ -67,8 +67,6 @@ class App extends Component {
       type={x.type.name}
     />);
 
-    // let error = 
-
     return (
       <div className="App">
         <input onKeyUp={(evt) => this.updateSearchTerm(evt)}/>
