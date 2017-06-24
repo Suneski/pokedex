@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { store, actions } from './redux/Store.js';
 import Api from './Api.js';
-import Types from './Types.js';
 import Error from './Error.js';
-import Pokemon from 'react-pokemon';
-import NoImage from './images/no-image.png';
+import Images from './Images.js';
+import Summary from './Summary.js';
 
 class App extends Component {
   constructor() {
@@ -30,43 +29,7 @@ class App extends Component {
     Api.makeAjaxCall(this.state.searchTerm.toLowerCase());
   };
 
-  shinyVersion() {
-    let sprite = this.state.shiny;
-
-    if (this.state.shiny === null) {
-      sprite = NoImage
-    }
-
-    store.dispatch({
-      type: actions.SHINY,
-      sprite: sprite
-    })
-  }
-
-  normalVersion() {
-    let sprite = this.state.normal;
-
-    if (this.state.normal === null) {
-      sprite = NoImage
-    }
-
-    store.dispatch({
-      type: actions.NORMAL,
-      sprite: sprite
-    })
-  }
-
   render() {
-
-    // let revTypes = this.state.types.reverse();
-    // let types = revTypes.map((x) => <Types
-    //   type={x.type.name}
-    // />);
-
-    let types = this.state.types.map((x) => <Types
-      type={x.type.name}
-    />);
-
     return (
       <div className="App">
         <input onKeyUp={(evt) => this.updateSearchTerm(evt)}/>
@@ -76,34 +39,25 @@ class App extends Component {
           />
         <div className={this.state.pokeDetails}>
           <h1>{this.state.name}</h1>
-          <Pokemon name={this.state.name} />
-          <img
-            className="sprite"
-            src={this.state.sprite}
-            alt="pokemon pic" />
-          <button
-            onClick={() => this.shinyVersion()}
-            className={this.state.shinyVisibility}>
-            Shiny!
-          </button>
-          <button
-            onClick={() => this.normalVersion()}
-            className={this.state.normalVisibility}>
-            Normal...
-          </button>
-          <p>Height: {this.state.height}</p>
-          <p>Weight: {this.state.weight}</p>
-          <p>Base Stats</p>
-          <p>HP: {this.state.hp}</p>
-          <p>Attack: {this.state.attack}</p>
-          <p>Defense: {this.state.defense}</p>
-          <p>Special Attack: {this.state.specialAttack}</p>
-          <p>Special Defense: {this.state.specialDefense}</p>
-          <p>Speed: {this.state.speed}</p>
-          <p>Type: </p>
-          <ol>
-            {types}
-          </ol>
+          <Images
+            name={this.state.name}
+            sprite={this.state.sprite}
+            normal={this.state.normal}
+            shiny={this.state.shiny}
+            shinyVisibility={this.state.shinyVisibility}
+            normalVisibility={this.state.normalVisibility}
+          />
+          <Summary
+            height={this.state.height}
+            weight={this.state.weight}
+            hp={this.state.hp}
+            attack={this.state.attack}
+            defense={this.state.defense}
+            specialAttack={this.state.specialAttack}
+            specialDefense={this.state.specialDefense}
+            speed={this.state.speed}
+            types={this.state.types}
+          />
         </div>
 
       </div>
