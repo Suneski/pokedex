@@ -4,7 +4,7 @@ import store from './redux/Store.js';
 const Api = {
   makeAjaxCall(searchTerm) {
     $.ajax({
-      url: 'http://pokeapi.co/api/v2/pokemon/' + searchTerm
+      url: 'https://pokeapi.co/api/v2/pokemon/' + searchTerm
     })
     .done((data) => {
       store.dispatch({
