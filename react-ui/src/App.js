@@ -21,7 +21,7 @@ class App extends Component {
   }
 
   makeAjaxCall() {
-    Api.makeAjaxCall(this.state.searchTerm);
+    Api.makeAjaxCall(this.state.searchTerm.toLowerCase());
   };
 
   shinyVersion() {
