@@ -42,7 +42,7 @@ class App extends Component {
           errorVisibility={this.state.errorVisibility}
         />
         <div className={this.state.pokeDetails}>
-          <h1>{this.state.name}</h1>
+          <h1>{this.state.name.toUpperCase()} #{this.state.id}</h1>
           <Images
             name={this.state.name}
             sprite={this.state.sprite}
@@ -52,6 +52,7 @@ class App extends Component {
             normalVisibility={this.state.normalVisibility}
           />
           <Summary
+            id={this.state.id}
             height={this.state.height}
             weight={this.state.weight}
             hp={this.state.hp}

@@ -53,6 +53,7 @@ const Api = {
         type: actions.SAVE_RESULTS,
         results: data,
         name: data.name,
+        id: data.id,
         weight: data.weight / 10 + 'kg',
         height: data.height / 10 + 'm',
         sprite: sprite,
