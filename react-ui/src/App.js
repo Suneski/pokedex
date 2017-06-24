@@ -23,11 +23,25 @@ class App extends Component {
     Api.makeAjaxCall(this.state.searchTerm);
   };
 
+
+
   render() {
     return (
       <div className="App">
         <input onKeyUp={(evt) => this.updateSearchTerm(evt)}/>
         <button onClick={() => this.makeAjaxCall()}>SEARCH</button>
+        <div className={this.state.pokeDetails}>
+          <h1>{this.state.name}</h1>
+          <img src={this.state.sprite} alt="pokemon pic" />
+          <p>Stats</p>
+          <p>HP: {this.state.hp}</p>
+          <p>Attack: {this.state.attack}</p>
+          <p>Defense: {this.state.defense}</p>
+          <p>Special Attack: {this.state.specialAttack}</p>
+          <p>Special Defense: {this.state.specialDefense}</p>
+          <p>Speed: {this.state.speed}</p>
+        </div>
+
       </div>
     );
   }
