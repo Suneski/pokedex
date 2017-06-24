@@ -90,6 +90,8 @@ class App extends Component {
             className={this.state.normalVisibility}>
             Normal...
           </button>
+          <p>Height: {this.state.height}</p>
+          <p>Weight: {this.state.weight}</p>
           <p>Base Stats</p>
           <p>HP: {this.state.hp}</p>
           <p>Attack: {this.state.attack}</p>

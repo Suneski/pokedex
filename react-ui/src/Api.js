@@ -49,6 +49,8 @@ const Api = {
         type: actions.SAVE_RESULTS,
         results: data,
         name: data.name,
+        weight: data.weight / 10 + 'kg',
+        height: data.height / 10 + 'm',
         sprite: sprite,
         normal: data.sprites.front_default,
         shiny: data.sprites.front_shiny,

@@ -39,6 +39,8 @@ const reducer = (state = initialState, action) => {
         errorVisibility: 'error-invisible',
         results: action.results,
         name: action.name,
+        weight: action.weight,
+        height: action.height,
         sprite: action.sprite,
         normal: action.normal,
         shiny: action.shiny,
