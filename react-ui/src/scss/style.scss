@@ -1,4 +1,6 @@
 @import 'reset';
+@import 'imageArea';
+@import 'loader';
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 
 body {
@@ -11,14 +13,6 @@ body {
 }
 
 .pokeDetails-visible {
-  display: block;
-}
-
-.loader-invisible {
-  display: none;
-}
-
-.loader-visible {
   display: block;
 }
 
@@ -44,9 +38,4 @@ body {
 
 .shiny-invisible {
   display: none;
-}
-
-.sprite {
-  width: 96px;
-  height: 96px;
 }

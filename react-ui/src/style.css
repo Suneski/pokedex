@@ -46,6 +46,34 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.sugimori {
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  border: 5px solid black; }
+
+.pokemon {
+  width: 300px;
+  height: 300px;
+  padding: 50px;
+  display: block;
+  margin: 0 auto; }
+
+.sprite {
+  background-color: white;
+  border: 5px solid black;
+  width: 96px;
+  height: 96px; }
+
+.loader-invisible {
+  display: none; }
+
+.loader-visible {
+  display: block;
+  width: 400px;
+  height: 400px;
+  border: 5px solid black; }
+
 body {
   font-family: 'Press Start 2P', cursive;
   background-color: #822824; }
@@ -54,12 +82,6 @@ body {
   display: none; }
 
 .pokeDetails-visible {
-  display: block; }
-
-.loader-invisible {
-  display: none; }
-
-.loader-visible {
   display: block; }
 
 .error-invisible {
@@ -79,7 +101,3 @@ body {
 
 .shiny-invisible {
   display: none; }
-
-.sprite {
-  width: 96px;
-  height: 96px; }
