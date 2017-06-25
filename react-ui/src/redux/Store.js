@@ -2,7 +2,7 @@ import { createStore } from 'redux';
 
 const actions = {
   SEARCH: 'SEARCH',
-  SAVE_RESULTS: 'SAVE_RESULTS',
+  STORE_RESULTS: 'STORE_RESULTS',
   SHINY: 'SHINY',
   NORMAL: 'NORMAL',
   ERROR: 'ERROR',
@@ -12,6 +12,7 @@ const actions = {
 var initialState = {
   searchTerm: 'bulbasaur',
   pokeDetails: 'pokeDetails-invisible',
+  welcomeVisibility: 'welcome-visible',
   errorVisibility: 'error-invisible',
   normalVisibility: 'normal-invisible',
   shinyVisibility: 'shiny-visible',
@@ -30,6 +31,7 @@ const reducer = (state = initialState, action) => {
       });
     case actions.SHOW_LOADER:
       return Object.assign({}, state, {
+        welcomeVisibility: 'welcome-invisible',
         loader: 'loader-visible',
         pokeDetails: 'pokeDetails-invisible',
         errorVisibility: 'error-invisible',
@@ -40,7 +42,7 @@ const reducer = (state = initialState, action) => {
         pokeDetails: 'pokeDetails-invisible',
         loader: 'loader-invisible',
       });
-    case actions.SAVE_RESULTS:
+    case actions.STORE_RESULTS:
       return Object.assign({}, state, {
         pokeDetails: 'pokeDetails-visible',
         errorVisibility: 'error-invisible',

@@ -6,6 +6,7 @@ import Sprite from './Sprite.js';
 import Sugimori from './Sugimori.js';
 import Summary from './Summary.js';
 import Loader from './images/pokeball-loader.gif'
+import Pokedex from './images/pokedex.png'
 
 class App extends Component {
   constructor() {
@@ -39,6 +40,11 @@ class App extends Component {
           <input onKeyUp={(evt) => this.updateSearchTerm(evt)}/>
           <button onClick={() => this.makeAjaxCall()}>LOOK UP</button>
         </header>
+
+        <div className={this.state.welcomeVisibility}>
+          <p>POKEDEX</p>
+          <img src={Pokedex} alt="pokedex" />
+        </div>
 
         <div>
           <img className={this.state.loader} src={Loader} alt="loading gif"/>

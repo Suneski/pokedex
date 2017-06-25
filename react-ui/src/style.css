@@ -137,3 +137,16 @@ body {
 
 .shiny-invisible {
   display: none; }
+
+.welcome-visible {
+  display: block;
+  font-size: 50px;
+  text-align: center;
+  margin: 0 auto; }
+  .welcome-visible p {
+    margin: 30px 0; }
+  .welcome-visible img {
+    width: 300px; }
+
+.welcome-invisible {
+  display: none; }

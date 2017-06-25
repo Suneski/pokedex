@@ -50,7 +50,7 @@ const Api = {
       }
 
       store.dispatch({
-        type: actions.SAVE_RESULTS,
+        type: actions.STORE_RESULTS,
         results: data,
         name: data.name,
         id: data.id,
