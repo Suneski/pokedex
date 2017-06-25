@@ -35,7 +35,7 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          SEARCH:
+          <p className="search-text">SEARCH:</p>
           <input onKeyUp={(evt) => this.updateSearchTerm(evt)}/>
           <button onClick={() => this.makeAjaxCall()}>LOOK UP</button>
         </header>

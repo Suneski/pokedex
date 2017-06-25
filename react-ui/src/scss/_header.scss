@@ -1,5 +1,12 @@
 header {
   color: white;
   background-color: black;
-  height: 25px;
+  height: 28px;
+  .search-text {
+    font-family: sans-serif;
+    display: inline-block;
+  }
+  input {
+    margin: 0 10px;
+  }
 }

@@ -1,7 +1,10 @@
 @media (max-width: 900px) {
   .App {
     width: 75%;
-    height: 860px;
+    height: 865px;
+  }
+  .welcome-visible {
+    font-size: 45px;
   }
   .sugimori, .loader-visible {
     margin: 20px auto 0 auto;
