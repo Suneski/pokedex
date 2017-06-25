@@ -3,7 +3,7 @@ import Pokemon from 'react-pokemon';
 import { store, actions } from './redux/Store.js';
 import NoImage from './images/no-image.png';
 
-class Summary extends React.Component {
+class Sprite extends React.Component {
   shinyVersion() {
     let sprite = this.props.shiny;
 
@@ -34,7 +34,6 @@ class Summary extends React.Component {
 
     return(
       <div>
-        <Pokemon name={this.props.name} />
         <img
           className="sprite"
           src={this.props.sprite}
@@ -54,4 +53,4 @@ class Summary extends React.Component {
   }
 }
 
-export default Summary;
+export default Sprite;
