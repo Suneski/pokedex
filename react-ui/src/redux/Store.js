@@ -10,7 +10,7 @@ const actions = {
 }
 
 var initialState = {
-  searchTerm: 'bulbasaur',
+  searchTerm: 'missingno',
   pokeDetails: 'pokeDetails-invisible',
   welcomeVisibility: 'welcome-visible',
   errorVisibility: 'error-invisible',
@@ -18,7 +18,7 @@ var initialState = {
   shinyVisibility: 'shiny-visible',
   loader: 'loader-invisible',
   results: [],
-  name: 'bulbasaur',
+  name: 'missingno',
   types: [],
 };
 
