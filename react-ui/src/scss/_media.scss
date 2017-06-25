@@ -1,0 +1,40 @@
+@media (max-width: 900px) {
+  .App {
+    width: 95%;
+  }
+  .sugimori {
+    margin-top: 2%;
+    width: 350px;
+    height: 350px;
+  }
+  .pokemon {
+    float: left;
+    max-width: 95%;
+    height: 95%;
+    padding: 2.5%;
+  }
+  .poke-info {
+    margin: 2% 0 0 2%;
+    font-size: 15px;
+    float: left;
+  }
+  .pkmn-name {
+    font-size: 20px;
+  }
+  .loader-visible {
+    width: 350px;
+    height: 350px;
+    img {
+      max-width: 95%;
+      height: 95%;
+      padding: 2.5%;
+    }
+  }
+  .sprite-div {
+    display: none;
+  }
+}
+
+@media (max-width: 630px) {
+
+}
