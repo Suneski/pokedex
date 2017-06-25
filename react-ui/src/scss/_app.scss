@@ -1,0 +1,48 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #822824;
+}
+
+.App {
+  width: 850px;
+  height: 520px;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 5px solid black;
+}
+
+.error-visible {
+  display: block;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.error-invisible {
+  display: none;
+}
+
+.welcome-visible {
+  display: block;
+  font-size: 50px;
+  text-align: center;
+  margin: 0 auto;
+  p {
+    margin: 30px 0;
+  }
+  img {
+    width: 300px;
+  }
+}
+
+.welcome-invisible {
+  display: none;
+}
+
+.pokeDetails-visible {
+  display: block;
+}
+
+.pokeDetails-invisible {
+  display: none;
+}

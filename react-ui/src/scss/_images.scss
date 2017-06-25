@@ -22,16 +22,29 @@
   margin-right: 250px;
   margin-top: 55px;
   text-align:center;
+  .sprite {
+    background-color: white;
+    border: 5px solid black;
+    width: 96px;
+    height: 96px;
+  }
+  button {
+    margin: 5px auto 0;
+  }
 }
 
-.sprite {
-  background-color: white;
-  border: 5px solid black;
-  width: 96px;
-  height: 96px;
+.normal-visible {
+  display: block;
 }
 
-.sprite-div button {
+.normal-invisible {
+  display: none;
+}
 
-  margin: 5px auto 0;
+.shiny-visible {
+  display: block;
+}
+
+.shiny-invisible {
+  display: none;
 }

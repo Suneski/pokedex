@@ -46,6 +46,45 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #822824; }
+
+.App {
+  width: 850px;
+  height: 520px;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 5px solid black; }
+
+.error-visible {
+  display: block;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 40px; }
+
+.error-invisible {
+  display: none; }
+
+.welcome-visible {
+  display: block;
+  font-size: 50px;
+  text-align: center;
+  margin: 0 auto; }
+  .welcome-visible p {
+    margin: 30px 0; }
+  .welcome-visible img {
+    width: 300px; }
+
+.welcome-invisible {
+  display: none; }
+
+.pokeDetails-visible {
+  display: block; }
+
+.pokeDetails-invisible {
+  display: none; }
+
 header {
   color: white;
   background-color: black;
@@ -73,15 +112,25 @@ header {
   margin-right: 250px;
   margin-top: 55px;
   text-align: center; }
+  .sprite-div .sprite {
+    background-color: white;
+    border: 5px solid black;
+    width: 96px;
+    height: 96px; }
+  .sprite-div button {
+    margin: 5px auto 0; }
 
-.sprite {
-  background-color: white;
-  border: 5px solid black;
-  width: 96px;
-  height: 96px; }
+.normal-visible {
+  display: block; }
 
-.sprite-div button {
-  margin: 5px auto 0; }
+.normal-invisible {
+  display: none; }
+
+.shiny-visible {
+  display: block; }
+
+.shiny-invisible {
+  display: none; }
 
 .loader-invisible {
   display: none; }
@@ -102,54 +151,3 @@ header {
 .type {
   margin-top: 5px;
   margin-left: 10px; }
-
-body {
-  font-family: 'Press Start 2P', cursive;
-  background-color: #822824; }
-
-.App {
-  width: 850px;
-  height: 520px;
-  margin: 20px auto;
-  background-color: rgba(255, 255, 255, 0.6);
-  border: 5px solid black; }
-
-.pokeDetails-invisible {
-  display: none; }
-
-.pokeDetails-visible {
-  display: block; }
-
-.error-invisible {
-  display: none; }
-
-.error-visible {
-  display: block;
-  font-size: 40px;
-  text-align: center;
-  padding-top: 40px; }
-
-.normal-visible {
-  display: block; }
-
-.normal-invisible {
-  display: none; }
-
-.shiny-visible {
-  display: block; }
-
-.shiny-invisible {
-  display: none; }
-
-.welcome-visible {
-  display: block;
-  font-size: 50px;
-  text-align: center;
-  margin: 0 auto; }
-  .welcome-visible p {
-    margin: 30px 0; }
-  .welcome-visible img {
-    width: 300px; }
-
-.welcome-invisible {
-  display: none; }
