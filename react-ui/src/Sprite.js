@@ -33,7 +33,7 @@ class Sprite extends React.Component {
   render() {
 
     return(
-      <div>
+      <div className="sprite-div">
         <img
           className="sprite"
           src={this.props.sprite}

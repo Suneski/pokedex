@@ -43,7 +43,7 @@ class App extends Component {
           errorVisibility={this.state.errorVisibility}
         />
         <div className={this.state.pokeDetails}>
-          <h1>{this.state.name.toUpperCase()} #{this.state.id}</h1>
+
           <Sugimori
             name={this.state.name}
           />
@@ -55,7 +55,7 @@ class App extends Component {
             shinyVisibility={this.state.shinyVisibility}
             normalVisibility={this.state.normalVisibility}
           />
-
+        <h1 className="pkmn-name">{this.state.name.toUpperCase()} #{this.state.id}</h1>
           <Summary
             id={this.state.id}
             height={this.state.height}
