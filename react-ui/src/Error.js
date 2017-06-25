@@ -4,7 +4,7 @@ class Error extends React.Component {
   render() {
     return (
       <div className={this.props.errorVisibility}>
-        Pokemon Not Found
+        Pokemon Not Found!
       </div>
     )
   }

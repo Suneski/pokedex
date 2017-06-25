@@ -124,7 +124,10 @@ body {
   display: none; }
 
 .error-visible {
-  display: block; }
+  display: block;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 40px; }
 
 .normal-visible {
   display: block; }
