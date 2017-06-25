@@ -10,3 +10,15 @@ header {
     margin: 0 10px;
   }
 }
+
+.pokeball {
+  float: right;
+  width: 22px;
+  margin-right: 2px;
+  animation: spin infinite 10s linear;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

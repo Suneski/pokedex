@@ -6,6 +6,7 @@ import Sugimori from './Sugimori.js';
 import Summary from './Summary.js';
 import Loader from './images/pokeball-loader.gif'
 import Pokedex from './images/pokedex.png'
+import Pokeball from './images/pokeball.png'
 
 class App extends Component {
   constructor() {
@@ -34,23 +35,27 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        
         <header>
           <p className="search-text">SEARCH:</p>
           <input onKeyUp={(evt) => this.updateSearchTerm(evt)}/>
           <button onClick={() => this.makeAjaxCall()}>LOOK UP</button>
+          <a href="https://pokeapi.co/" target="_blank"><img src={Pokeball} alt="pokeball"  className="pokeball"/></a>
         </header>
 
         <div className={this.state.welcomeVisibility}>
           <p>POKEDEX</p>
-          <img src={Pokedex} alt="pokedex" />
+          <img src={Pokedex} alt="pokedex"/>
         </div>
 
         <div>
           <img className={this.state.loader} src={Loader} alt="loading gif"/>
         </div>
+
         <Error
           errorVisibility={this.state.errorVisibility}
         />
+
         <div className={this.state.pokeDetails}>
 
           <Sugimori
