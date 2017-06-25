@@ -1,9 +1,11 @@
 @media (max-width: 900px) {
   .App {
-    width: 95%;
+    width: 75%;
+    height: 860px;
   }
-  .sugimori {
-    margin-top: 2%;
+  .sugimori, .loader-visible {
+    margin: 20px auto 0 auto;
+    float: none;
     width: 350px;
     height: 350px;
   }
@@ -14,9 +16,9 @@
     padding: 2.5%;
   }
   .poke-info {
-    margin: 2% 0 0 2%;
+    margin: 2% auto 0 auto;
+    text-align: center;
     font-size: 15px;
-    float: left;
   }
   .pkmn-name {
     font-size: 20px;
@@ -31,10 +33,17 @@
     }
   }
   .sprite-div {
-    display: none;
+    margin: 10px auto 0 auto;
   }
 }
 
-@media (max-width: 630px) {
-
+@media (max-width: 510px) {
+  .App {
+    width: 350px;
+    height: 810px;
+  }
+  .sugimori, .loader-visible {
+    width: 300px;
+    height: 300px;
+  }
 }

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { store, actions } from './redux/Store.js';
 import Api from './Api.js';
 import Error from './Error.js';
-import Sprite from './Sprite.js';
 import Sugimori from './Sugimori.js';
 import Summary from './Summary.js';
 import Loader from './images/pokeball-loader.gif'
@@ -71,16 +70,14 @@ class App extends Component {
             specialDefense={this.state.specialDefense}
             speed={this.state.speed}
             types={this.state.types}
-          />
-
-          <Sprite
-            name={this.state.name}
             sprite={this.state.sprite}
             normal={this.state.normal}
             shiny={this.state.shiny}
             shinyVisibility={this.state.shinyVisibility}
             normalVisibility={this.state.normalVisibility}
           />
+
+
         </div>
 
       </div>

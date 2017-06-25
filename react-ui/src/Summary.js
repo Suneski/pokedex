@@ -1,5 +1,6 @@
 import React from 'react';
 import Types from './Types.js';
+import Sprite from './Sprite.js';
 
 class Summary extends React.Component {
 
@@ -18,7 +19,14 @@ class Summary extends React.Component {
     return(
       <div className="poke-info">
         <h1 className="pkmn-name">{this.props.name} #{this.props.id}</h1>
-        <br/>
+        <Sprite
+          name={this.props.name}
+          sprite={this.props.sprite}
+          normal={this.props.normal}
+          shiny={this.props.shiny}
+          shinyVisibility={this.props.shinyVisibility}
+          normalVisibility={this.props.normalVisibility}
+        />
         Type: {types}
 
         <br/>
