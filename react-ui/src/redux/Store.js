@@ -27,8 +27,6 @@ const reducer = (state = initialState, action) => {
     case actions.SEARCH:
       return Object.assign({}, state, {
         searchTerm: action.searchTerm,
-        normalVisibility: 'normal-invisible',
-        shinyVisibility: 'shiny-visible',
       });
     case actions.SHOW_LOADER:
       return Object.assign({}, state, {
@@ -46,6 +44,8 @@ const reducer = (state = initialState, action) => {
       return Object.assign({}, state, {
         pokeDetails: 'pokeDetails-visible',
         errorVisibility: 'error-invisible',
+        normalVisibility: 'normal-invisible',
+        shinyVisibility: 'shiny-visible',
         loader: 'loader-invisible',
         results: action.results,
         name: action.name,

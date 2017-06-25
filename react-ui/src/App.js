@@ -34,8 +34,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <input onKeyUp={(evt) => this.updateSearchTerm(evt)}/>
-        <button onClick={() => this.makeAjaxCall()}>SEARCH</button>
+        <header>
+          SEARCH:
+          <input onKeyUp={(evt) => this.updateSearchTerm(evt)}/>
+          <button onClick={() => this.makeAjaxCall()}>LOOK UP</button>
+        </header>
+
         <div>
           <img className={this.state.loader} src={Loader} alt="loading gif"/>
         </div>
@@ -47,16 +51,10 @@ class App extends Component {
           <Sugimori
             name={this.state.name}
           />
-          <Sprite
-            name={this.state.name}
-            sprite={this.state.sprite}
-            normal={this.state.normal}
-            shiny={this.state.shiny}
-            shinyVisibility={this.state.shinyVisibility}
-            normalVisibility={this.state.normalVisibility}
-          />
-        <h1 className="pkmn-name">{this.state.name.toUpperCase()} #{this.state.id}</h1>
+
+
           <Summary
+            name={this.state.name.toUpperCase()}
             id={this.state.id}
             height={this.state.height}
             weight={this.state.weight}
@@ -67,6 +65,15 @@ class App extends Component {
             specialDefense={this.state.specialDefense}
             speed={this.state.speed}
             types={this.state.types}
+          />
+
+          <Sprite
+            name={this.state.name}
+            sprite={this.state.sprite}
+            normal={this.state.normal}
+            shiny={this.state.shiny}
+            shinyVisibility={this.state.shinyVisibility}
+            normalVisibility={this.state.normalVisibility}
           />
         </div>
 

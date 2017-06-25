@@ -1,15 +1,16 @@
 .sugimori {
-  // float: left;
-  width: 400px;
-  height: 400px;
+  float: left;
+  width: 450px;
+  height: 450px;
+  margin-left: 2%;
   background-color: white;
   border: 5px solid black;
 }
 
 .pokemon {
-  width: 300px;
-  height: 300px;
-  padding: 50px;
+  max-width: 75%;
+  height: 75%;
+  padding: 12.5%;
   display: block;
   margin: 0 auto;
 }
@@ -17,7 +18,9 @@
 .sprite-div {
   width: 106px;
   height: 136px;
-  // border: 1px solid white;
+  float: right;
+  margin-right: 250px;
+  margin-top: 55px;
   text-align:center;
 }
 

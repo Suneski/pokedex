@@ -11,14 +11,20 @@ class Summary extends React.Component {
     // />);
 
     let types = this.props.types.map((x, i) => <Types
-      type={x.type.name}
+      type={x.type.name.toUpperCase()}
       key={i}
     />);
 
     return(
-      <div>
+      <div className="poke-info">
+        <h1 className="pkmn-name">{this.props.name} #{this.props.id}</h1>
+        <br/>
+        Type: {types}
+
+        <br/>
         <p>Height: {this.props.height}</p>
         <p>Weight: {this.props.weight}</p>
+        <br/>
         <p>Base Stats</p>
         <p>HP: {this.props.hp}</p>
         <p>Attack: {this.props.attack}</p>
@@ -26,10 +32,7 @@ class Summary extends React.Component {
         <p>Special Attack: {this.props.specialAttack}</p>
         <p>Special Defense: {this.props.specialDefense}</p>
         <p>Speed: {this.props.speed}</p>
-        <p>Type: </p>
-        <ol>
-          {types}
-        </ol>
+
       </div>
     )
   }

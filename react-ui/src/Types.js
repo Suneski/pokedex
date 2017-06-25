@@ -5,9 +5,9 @@ class Types extends React.Component {
   render() {
 
     return(
-      <li className="type">
+      <p className="type">
         {this.props.type}
-      </li>
+      </p>
     )
   }
 }

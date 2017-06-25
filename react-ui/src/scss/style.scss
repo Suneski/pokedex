@@ -1,4 +1,5 @@
 @import 'reset';
+@import 'header';
 @import 'images';
 @import 'loader';
 @import 'text';
@@ -7,6 +8,14 @@
 body {
   font-family: 'Press Start 2P', cursive;
   background-color: #822824;
+}
+
+.App {
+  width: 850px;
+  height: 520px;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 5px solid black;
 }
 
 .pokeDetails-invisible {
