@@ -52,20 +52,24 @@ body {
 
 .App {
   width: 850px;
-  height: 520px;
+  height: 525px;
   margin: 20px auto;
   background-color: rgba(255, 255, 255, 0.6);
   border: 5px solid black; }
 
 .welcome-visible {
   display: block;
-  font-size: 50px;
   text-align: center;
   margin: 0 auto; }
+  .welcome-visible h1 {
+    margin: 30px 0 0 0;
+    font-size: 50px; }
   .welcome-visible p {
-    margin: 30px 0; }
+    font-size: 20px;
+    margin: 10px 0; }
   .welcome-visible img {
-    width: 300px; }
+    width: 300px;
+    margin: 15px 0; }
 
 .welcome-invisible {
   display: none; }
@@ -96,16 +100,12 @@ header {
   color: white;
   background-color: black;
   height: 28px; }
-  header .search-text {
-    font-family: sans-serif;
-    display: inline-block; }
   header input {
-    margin: 0 10px; }
+    margin: 0 8px; }
 
 .pokeball {
-  float: right;
+  float: left;
   width: 22px;
-  margin-right: 2px;
   animation: spin infinite 10s linear; }
 
 @keyframes spin {
@@ -113,6 +113,15 @@ header {
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
+
+.bulbapedia-invisible {
+  display: none; }
+
+.bulbapedia-visible {
+  display: block;
+  float: right;
+  margin-right: 5px;
+  width: 22px; }
 
 .sugimori {
   float: left;
@@ -123,7 +132,6 @@ header {
   border: 5px solid black; }
 
 .pokemon {
-  outline: 1px solid orange;
   max-width: 75%;
   height: 75%;
   padding: 12.5%;
@@ -171,7 +179,7 @@ header {
 
 .poke-info {
   margin: 2% 0 0 490px;
-  line-height: 1.3; }
+  line-height: 1.2; }
 
 .pkmn-name {
   font-size: 25px; }
@@ -184,13 +192,12 @@ header {
     width: 75%;
     height: 870px; }
   .welcome-visible {
-    font-size: 50px;
     margin-top: 50px; }
     .welcome-visible img {
-      margin-top: 75px;
+      margin-top: 20px;
       width: 75%; }
   .sugimori {
-    margin: 20px auto 0 auto;
+    margin: 1% auto 0 auto;
     float: none;
     width: 350px;
     height: 350px; }
@@ -223,7 +230,7 @@ header {
   .App {
     width: 350px;
     height: 810px; }
-  .welcome-visible {
+  .welcome-visible h1 {
     font-size: 40px; }
   .sugimori {
     width: 300px;

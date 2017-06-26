@@ -15,7 +15,7 @@ const Api = {
         searchTerm = "deoxys-normal";
         break;
       case "giratina":
-        searchTerm = "giratina-origin";
+        searchTerm = "giratina-altered";
         break;
       case "shaymin":
         searchTerm = "shaymin-land";
@@ -37,7 +37,6 @@ const Api = {
       url: 'https://pokeapi.co/api/v2/pokemon/' + searchTerm
     })
     .catch( (ex) => {
-      console.log('parsing failed', ex);
       store.dispatch({
         type: actions.ERROR
       })

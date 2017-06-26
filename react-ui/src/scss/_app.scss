@@ -5,7 +5,7 @@ body {
 
 .App {
   width: 850px;
-  height: 520px;
+  height: 525px;
   margin: 20px auto;
   background-color: rgba(255, 255, 255, 0.6);
   border: 5px solid black;
@@ -13,14 +13,19 @@ body {
 
 .welcome-visible {
   display: block;
-  font-size: 50px;
   text-align: center;
   margin: 0 auto;
+  h1 {
+    margin: 30px 0 0 0;
+    font-size: 50px;
+  }
   p {
-    margin: 30px 0;
+    font-size: 20px;
+    margin: 10px 0;
   }
   img {
     width: 300px;
+    margin: 15px 0;
   }
 }
 
