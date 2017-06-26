@@ -5,27 +5,39 @@ import NoImage from './images/no-image.png';
 class Sprite extends React.Component {
   shinyVersion() {
     let sprite = this.props.shiny;
+    let backSprite = this.props.backShiny;
 
     if (this.props.shiny === null) {
       sprite = NoImage
     }
 
+    if (this.props.backShiny === null) {
+      backSprite = NoImage
+    }
+
     store.dispatch({
       type: actions.SHINY,
-      sprite: sprite
+      sprite: sprite,
+      backSprite: backSprite,
     })
   }
 
   normalVersion() {
     let sprite = this.props.normal;
+    let backSprite = this.props.backNormal;
 
     if (this.props.normal === null) {
       sprite = NoImage
     }
 
+    if (this.props.backNormal === null) {
+      backSprite = NoImage
+    }
+
     store.dispatch({
       type: actions.NORMAL,
-      sprite: sprite
+      sprite: sprite,
+      backSprite: backSprite,
     })
   }
 
@@ -44,12 +56,12 @@ class Sprite extends React.Component {
         <button
           onClick={() => this.shinyVersion()}
           className={this.props.shinyVisibility}>
-          Shiny!
+          Shiny Sprite
         </button>
         <button
           onClick={() => this.normalVersion()}
           className={this.props.normalVisibility}>
-          Normal...
+          Normal Sprite
         </button>
       </div>
     )

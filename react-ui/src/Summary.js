@@ -18,16 +18,18 @@ class Summary extends React.Component {
 
     return(
       <div className="poke-info">
-        
+
         <h1 className="pkmn-name">
           #{this.props.id} {this.props.name}
         </h1>
-        
-        <Sprite
-          name={this.props.name}
+
+        <Sprite          
           sprite={this.props.sprite}
+          backSprite={this.props.backSprite}
           normal={this.props.normal}
           shiny={this.props.shiny}
+          backNormal={this.props.backNormal}
+          backShiny={this.props.backShiny}
           shinyVisibility={this.props.shinyVisibility}
           normalVisibility={this.props.normalVisibility}
         />

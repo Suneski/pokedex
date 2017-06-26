@@ -79,6 +79,8 @@ class App extends Component {
             backSprite={this.state.backSprite}
             normal={this.state.normal}
             shiny={this.state.shiny}
+            backNormal={this.state.backNormal}
+            backShiny={this.state.backShiny}
             shinyVisibility={this.state.shinyVisibility}
             normalVisibility={this.state.normalVisibility}
           />

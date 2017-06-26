@@ -55,8 +55,11 @@ const reducer = (state = initialState, action) => {
         weight: action.weight,
         height: action.height,
         sprite: action.sprite,
+        backSprite: action.backSprite,
         normal: action.normal,
         shiny: action.shiny,
+        backNormal: action.backNormal,
+        backShiny: action.backShiny,
         hp: action.hp,
         attack: action.attack,
         defense: action.defense,
@@ -68,12 +71,14 @@ const reducer = (state = initialState, action) => {
     case actions.SHINY:
       return Object.assign({}, state, {
         sprite: action.sprite,
+        backSprite: action.backSprite,
         normalVisibility: 'normal-visible',
         shinyVisibility: 'shiny-invisible',
       });
     case actions.NORMAL:
       return Object.assign({}, state, {
         sprite: action.sprite,
+        backSprite: action.backSprite,
         normalVisibility: 'normal-invisible',
         shinyVisibility: 'shiny-visible',
       });
