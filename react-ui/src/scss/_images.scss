@@ -25,6 +25,7 @@
     border: 4px solid black;
     width: 96px;
     height: 96px;
+    margin-bottom: 10px;
   }
   .sprite {
     float: left;
@@ -33,8 +34,7 @@
     float: right;
   }
   button {
-    // clear: both;
-    margin: 10px auto 0;
+    margin: 0 auto;
   }
 }
 
