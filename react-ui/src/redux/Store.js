@@ -12,6 +12,7 @@ const actions = {
 var initialState = {
   searchTerm: 'missingno',
   pokeDetails: 'pokeDetails-invisible',
+  bulbapedia: 'bulbapedia-invisible',
   welcomeVisibility: 'welcome-visible',
   errorVisibility: 'error-invisible',
   normalVisibility: 'normal-invisible',
@@ -32,6 +33,7 @@ const reducer = (state = initialState, action) => {
     case actions.SHOW_LOADER:
       return Object.assign({}, state, {
         welcomeVisibility: 'welcome-invisible',
+        bulbapedia: 'bulbapedia-invisible',
         loader: 'loader-visible',
         pokeDetails: 'pokeDetails-invisible',
         errorVisibility: 'error-invisible',
@@ -39,12 +41,14 @@ const reducer = (state = initialState, action) => {
     case actions.ERROR:
       return Object.assign({}, state, {
         errorVisibility: 'error-visible',
+        bulbapedia: 'bulbapedia-invisible',
         pokeDetails: 'pokeDetails-invisible',
         loader: 'loader-invisible',
       });
     case actions.STORE_RESULTS:
       return Object.assign({}, state, {
         pokeDetails: 'pokeDetails-visible',
+        bulbapedia: 'bulbapedia-visible',
         errorVisibility: 'error-invisible',
         normalVisibility: 'normal-invisible',
         shinyVisibility: 'shiny-visible',

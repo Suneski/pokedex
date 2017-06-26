@@ -7,6 +7,7 @@ import Summary from './Summary.js';
 import Loader from './images/pokeball-loader.gif'
 import Pokedex from './images/pokedex.png'
 import Pokeball from './images/pokeball.png'
+import Bulbapedia from './images/bulbapedia.png'
 
 class App extends Component {
   constructor() {
@@ -33,19 +34,22 @@ class App extends Component {
   };
 
   render() {
+    let bulbapedia = `https://bulbapedia.bulbagarden.net/wiki/${this.state.name}_(Pokemon)`
+
     return (
       <div className="App">
 
         <header>
-          <p className="search-text">SEARCH:</p>
-          <input onKeyUp={(evt) => this.updateSearchTerm(evt)}/>
-          <button onClick={() => this.makeAjaxCall()}>LOOK UP</button>
           <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer"><img src={Pokeball} alt="pokeball"  className="pokeball"/></a>
+          <input placeholder="pokemon name" onKeyUp={(evt) => this.updateSearchTerm(evt)}/>
+          <button onClick={() => this.makeAjaxCall()}>LOOK UP</button>
+          <a href={bulbapedia} target="_blank" rel="noopener noreferrer"><img src={Bulbapedia} alt="pokeball"  className={this.state.bulbapedia}/></a>
         </header>
 
         <div className={this.state.welcomeVisibility}>
-          <p>POKEDEX</p>
+          <h1>POKEDEX</h1>
           <img src={Pokedex} alt="pokedex"/>
+          <p>(Generation 7 not supported by API)</p>
         </div>
 
         <div>
