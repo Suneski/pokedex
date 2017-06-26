@@ -5,7 +5,7 @@ import Error from './Error.js';
 import Sugimori from './Sugimori.js';
 import Summary from './Summary.js';
 import Loader from './images/pokeball-loader.gif'
-import Pokedex from './images/pokedex.gif'
+import Pokedex from './images/pokedex.png'
 import Pokeball from './images/pokeball.png'
 
 class App extends Component {
