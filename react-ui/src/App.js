@@ -29,6 +29,11 @@ class App extends Component {
     }
   }
 
+  randomPoke() {
+    let rng = Math.floor(Math.random()*721 + 1)
+    Api.makeAjaxCall(rng);
+  }
+
   makeAjaxCall() {
     Api.makeAjaxCall(this.state.searchTerm.toLowerCase());
   };
@@ -43,6 +48,7 @@ class App extends Component {
           <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer"><img src={Pokeball} alt="pokeball"  className="pokeball"/></a>
           <input placeholder="pokemon name" onKeyUp={(evt) => this.updateSearchTerm(evt)}/>
           <button onClick={() => this.makeAjaxCall()}>LOOK UP</button>
+          <button onClick={() => this.randomPoke()}>RANDOM</button>
           <a href={bulbapedia} target="_blank" rel="noopener noreferrer"><img src={Bulbapedia} alt="pokeball"  className={this.state.bulbapedia}/></a>
         </header>
 
