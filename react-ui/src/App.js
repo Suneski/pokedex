@@ -40,7 +40,7 @@ class App extends Component {
           <p className="search-text">SEARCH:</p>
           <input onKeyUp={(evt) => this.updateSearchTerm(evt)}/>
           <button onClick={() => this.makeAjaxCall()}>LOOK UP</button>
-          <a href="https://pokeapi.co/" target="_blank"><img src={Pokeball} alt="pokeball"  className="pokeball"/></a>
+          <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer"><img src={Pokeball} alt="pokeball"  className="pokeball"/></a>
         </header>
 
         <div className={this.state.welcomeVisibility}>
