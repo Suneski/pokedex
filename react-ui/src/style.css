@@ -123,6 +123,7 @@ header {
   border: 5px solid black; }
 
 .pokemon {
+  outline: 1px solid orange;
   max-width: 75%;
   height: 75%;
   padding: 12.5%;
@@ -194,7 +195,6 @@ header {
     width: 350px;
     height: 350px; }
   .pokemon {
-    float: left;
     max-width: 95%;
     height: 95%;
     padding: 2.5%; }
