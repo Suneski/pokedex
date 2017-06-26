@@ -6,11 +6,6 @@ class Summary extends React.Component {
 
   render() {
 
-    // let revTypes = this.state.types.reverse();
-    // let types = revTypes.map((x) => <Types
-    //   type={x.type.name}
-    // />);
-
     let types = this.props.types.map((x, i) => <Types
       type={x.type.name.toUpperCase()}
       key={i}
@@ -23,7 +18,7 @@ class Summary extends React.Component {
           #{this.props.id} {this.props.name}
         </h1>
 
-        <Sprite          
+        <Sprite
           sprite={this.props.sprite}
           backSprite={this.props.backSprite}
           normal={this.props.normal}

@@ -53,6 +53,8 @@ const Api = {
         backSprite = NoImage
       }
 
+      let revTypes = data.types.reverse();
+
       store.dispatch({
         type: actions.STORE_RESULTS,
         results: data,
@@ -72,7 +74,7 @@ const Api = {
         specialAttack: data.stats[2].base_stat,
         specialDefense: data.stats[1].base_stat,
         speed: data.stats[0].base_stat,
-        types: data.types
+        types: revTypes
       })
     });
   }
