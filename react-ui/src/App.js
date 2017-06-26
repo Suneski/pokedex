@@ -35,7 +35,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        
+
         <header>
           <p className="search-text">SEARCH:</p>
           <input onKeyUp={(evt) => this.updateSearchTerm(evt)}/>
@@ -76,6 +76,7 @@ class App extends Component {
             speed={this.state.speed}
             types={this.state.types}
             sprite={this.state.sprite}
+            backSprite={this.state.backSprite}
             normal={this.state.normal}
             shiny={this.state.shiny}
             shinyVisibility={this.state.shinyVisibility}

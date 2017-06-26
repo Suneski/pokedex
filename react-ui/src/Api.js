@@ -44,9 +44,14 @@ const Api = {
     })
     .done((data) => {
       let sprite = data.sprites.front_default;
+      let backSprite = data.sprites.back_default;
 
       if (sprite === null) {
         sprite = NoImage
+      }
+
+      if (backSprite === null) {
+        backSprite = NoImage
       }
 
       store.dispatch({
@@ -57,8 +62,11 @@ const Api = {
         weight: data.weight / 10 + 'kg',
         height: data.height / 10 + 'm',
         sprite: sprite,
+        backSprite: backSprite,
         normal: data.sprites.front_default,
         shiny: data.sprites.front_shiny,
+        backNormal: data.sprites.back_default,
+        backShiny: data.sprites.back_shiny,
         hp: data.stats[5].base_stat,
         attack: data.stats[4].base_stat,
         defense: data.stats[3].base_stat,

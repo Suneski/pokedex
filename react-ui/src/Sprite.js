@@ -37,6 +37,10 @@ class Sprite extends React.Component {
           className="sprite"
           src={this.props.sprite}
           alt="pokemon pic" />
+        <img
+          className="back-sprite"
+          src={this.props.backSprite}
+          alt="pokemon pic" />
         <button
           onClick={() => this.shinyVersion()}
           className={this.props.shinyVisibility}>

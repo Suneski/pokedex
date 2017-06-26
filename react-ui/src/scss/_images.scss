@@ -16,17 +16,25 @@
 }
 
 .sprite-div {
-  width: 106px;
+  // width: 208px;
+  width: 230px;
   height: 136px;
-  text-align:center;
-  .sprite {
+  text-align: center;
+  .sprite, .back-sprite {
     background-color: white;
     border: 4px solid black;
     width: 96px;
     height: 96px;
   }
+  .sprite {
+    float: left;
+  }
+  .back-sprite {
+    float: right;
+  }
   button {
-    margin: 5px auto 0;
+    // clear: both;
+    margin: 10px auto 0;
   }
 }
 
